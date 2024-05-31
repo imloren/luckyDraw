@@ -14,9 +14,11 @@ function App() {
     { background: '#e9e8fe', fonts: [{ text: '奈雪の茶' }] },
     { background: '#b8c5f2', fonts: [{ text: '乐乐茶' }] },
     { background: '#e9e8fe', fonts: [{ text: '24章' }] },
-    { background: '#b8c5f2', fonts: [{ text: '慕白手作' }] },
+    { background: '#b8c5f2', fonts: [{ text: '牧白手作' }] },
     { background: '#e9e8fe', fonts: [{ text: 'O2' }] },
-    { background: '#b8c5f2', fonts: [{ text: '茉酸奶' }] }
+    { background: '#b8c5f2', fonts: [{ text: '茉酸奶' }] },
+    { background: '#e9e8fe', fonts: [{ text: 'CoCo' }] },
+    { background: '#b8c5f2', fonts: [{ text: '茶百道' }] }
   ])
   const [buttons] = useState([
     { radius: '40%', background: '#617df2' },
@@ -35,7 +37,7 @@ function App() {
   const onStart = () => {
     myLucky.current && myLucky.current?.play()
     setTimeout(() => {
-      const index = (Math.random() * 10) >> 0
+      const index = (Math.random() * 12) >> 0
       myLucky.current.stop(index)
     }, 2500)
   }
@@ -59,9 +61,7 @@ function App() {
 
       {prizesText && (
         <div className="text">
-          今天就“盘”它
-          <br />
-          <span>《{prizesText}》 !!!</span>
+          今天就“盘”<span>《{prizesText}》 !!!</span>
         </div>
       )}
     </div>

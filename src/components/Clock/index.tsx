@@ -15,7 +15,7 @@ const Clock = () => {
     return () => cancelAnimationFrame(requestRef.current)
   }, [])
 
-  return <h1>实时时间：{time.toLocaleTimeString()}</h1>
+  return <h1>北京时间：{time.toLocaleTimeString()}</h1>
 }
 
 export default Clock

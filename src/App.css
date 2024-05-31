@@ -1,0 +1,16 @@
+.lucky-draw-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.lucky-draw-wrapper .text {
+  color: #8a9bf3;
+  font-weight: bold;
+  font-size: 48px;
+  margin-top: 20px;
+  text-align: center;
+}

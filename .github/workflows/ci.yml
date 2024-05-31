@@ -1,0 +1,21 @@
+name: ci
+on: [push]
+jobs:
+  build:
+    name: website build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: checkout pages
+        uses: actions/checkout@v2.3.1
+
+      - run: npm install
+      - run: npm run build
+
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: dist

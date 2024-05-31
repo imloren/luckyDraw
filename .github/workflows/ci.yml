@@ -2,22 +2,27 @@ name: ci
 on: [push]
 jobs:
   build:
-    name: website build
+    name: 🛠️ Website build
     runs-on: ubuntu-latest
     defaults:
       run:
         shell: bash
     steps:
-      - uses: actions/checkout@v4
+      - name: 🔍 Checkout code
+        uses: actions/checkout@v4
+
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
 
-      - run: npm install
-      - run: npm run build
+      - name: 📦 Install dependencies
+        run: npm install
 
-      - name: Deploy
+      - name: 🔧 Build project
+        run: npm run build
+
+      - name: 🚀 Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages

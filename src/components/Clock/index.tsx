@@ -2,8 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 
 const Clock = () => {
   const [time, setTime] = useState(new Date())
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const requestRef = useRef<any>()
+  const requestRef = useRef<number>(0)
 
   const updateTime = () => {
     setTime(new Date())
